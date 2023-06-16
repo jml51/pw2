@@ -1,0 +1,172 @@
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body{
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0px;
+    scroll-behavior: smooth;
+    background-size: cover;
+    overflow:auto ;
+    background-color: #4b3f00;
+}
+
+#left{
+    width: 53%;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+    float: left;
+}
+#right{
+    width: 46.8%;
+    height: 100%;
+    background-color: rgba(5, 3, 44, 0.806);
+    float: right;
+    
+}
+a{
+    color: white;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+}a:hover {color: #fffefe; background: rgba(0, 0, 0, 0.3);border-radius: 2px;text-decoration: none;}
+
+/* ---------------------header-------------------------*/
+h1{
+    font-size:large ;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 70px;
+    text-align: center;
+    padding: 15px;
+    float: left;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    border: solid #fffefe;
+}
+#header2{
+    height: 70px;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    float: cen;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(70, 70, 70);
+    margin-bottom: 20px;
+    border-collapse: separate;
+    border: 7px ridge rgba(0, 0, 0, 0.516);
+    z-index: 1;
+    
+} 
+
+#header2 li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 20px 0px 0px;
+}
+
+
+li a:hover {
+    color: #fffefe;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-decoration: none;
+    
+}
+li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*---------------------------space----------------------------*/
+#space{
+    width: 100%;
+    height: 50px;
+    
+}
+
+#line{
+    width: 100%;
+    height: 5px;
+    background-color: rgb(3, 3, 3);
+}
+
+/*---------------------------   map_content  ----------------------------*/
+
+h2{
+    margin: 50px 0px 0px 210px;
+    width: 157px;
+    height: 30px;
+    text-align: center;
+    color: rgb(240, 240, 240);
+    
+}
+#textm{
+    
+    font-size: larger;
+    float: left;
+    width: 455px;
+    height: 295px;
+    margin: 80px 0px 0px 85px ;
+    color: white;
+    border: solid #fffefe;
+    text-align: justify ;
+}
+p{
+    margin: 20px;
+}
+
+#map_content{
+    height: 656px;
+}
+#btn{
+    background-color: #fffefe;
+    border-radius: 50%;
+    float: right;
+    margin: 20px 30px 0px 0px;
+    transform: rotate(270deg);
+}
+#btn-{
+    background-color: #fffefe;
+    border-radius: 50%;
+    float: left;
+    margin: -33px 0px 0px 30px;
+    transform: rotate(90deg);
+}
+
+/*---------------------------   mist  ----------------------------*/
+.he{
+    opacity: 0;
+    transition: 4000ms;
+    transform: translateX(-200px);
+}
+.show1{
+    opacity: 1;
+    transform: translateX(20px);
+}
+
+.block{
+    display: none
+}
+.block2{
+    display: none
+}
+
+.fade_ {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
