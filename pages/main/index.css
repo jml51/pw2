@@ -89,7 +89,7 @@ li button:hover {
     color: white;
   }
 
-form{
+.form_l{
     max-width: 300px;
     padding: 10px;
     background-color:rgba(54, 54, 54,0);

@@ -37,9 +37,9 @@ login_abrir.addEventListener("click", function(){
     q = q + 1;
 
     if(q % 2 == 1){
-        document.getElementById("form_login").style.display = "block";
+        login_form.style.display = "block";
     }else{
-        document.getElementById("form_login").style.display = "none";
+        login_form.style.display = "none";
     }
 });
 
