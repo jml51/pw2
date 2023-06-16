@@ -1,6 +1,7 @@
 <?php
     include_once __DIR__ . '../../../pages/templates/header.php'
 ?>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
     <link rel="stylesheet" href="mapa.css" />
     
