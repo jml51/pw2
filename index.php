@@ -3,9 +3,6 @@
 
     session_start();
 
-
-
-
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -35,12 +32,6 @@
                     </ul>
                 </div>
             </header>
-
-
-
-
-
-
             <?php
             if(isset($_SESSION['id'])){
             ?>
@@ -67,8 +58,18 @@
             }else{
             ?>
                 <div class="login_form" id="form_login">
-                    <form action="/action_page.php"  class="form-container form_l">
+                    <form action="/src/controller/contr_autenticar.php" method="post"  class="form-container form_l">
                         <h3>Login</h3>
+                        <?php 
+                            if(isset($_SESSION['erros'])){
+                                echo '<div class="alert alert-danger">';
+                                foreach($_SESSION['erros'] as $error){
+                                    echo $error .'<br>';
+                                };
+                                echo '</div>';
+                            };
+                            unset($_SESSION['erros']);
+                        ?>
 
                         <label for="email" class="form-label"><b>Email</b></label>
                         <input class="form-control" type="text" placeholder="Enter Email" name="email"  required>

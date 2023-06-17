@@ -15,7 +15,7 @@ $pdo->exec(
         foto CHAR NULL, 
         administrador CHAR, 
         dono CHAR,
-        palavra_passe CHAR
+        pass_word CHAR
     ); 
 ');
 
@@ -28,11 +28,11 @@ $utilizador = [
     'foto'          => null,
     'administrador' => true,
     'dono'          => true,
-    'palavra_passe' => '123456'
+    'pass_word' => '123456'
 
 ];
 
-$utilizador['palavra_passe'] = password_hash($utilizador['palavra_passe'], PASSWORD_DEFAULT);
+$utilizador['pass_word'] = password_hash($utilizador['pass_word'], PASSWORD_DEFAULT);
 
 
 $sql = ('INSERT INTO utilizadores(
@@ -42,7 +42,7 @@ $sql = ('INSERT INTO utilizadores(
             foto,
             administrador,
             dono,
-            palavra_passe)
+            pass_word)
         VALUES(
             :nome,
             :nif,
@@ -50,7 +50,7 @@ $sql = ('INSERT INTO utilizadores(
             :foto,
             :administrador,
             :dono,
-            :palavra_passe)
+            :pass_word)
         ');
 
     $post = $GLOBALS['pdo']->prepare($sql);
@@ -62,7 +62,7 @@ $sql = ('INSERT INTO utilizadores(
         ':foto'          => $utilizador['foto'],
         ':administrador' => $utilizador['administrador'],
         ':dono'          => $utilizador['dono'],
-        ':palavra_passe' => $utilizador['palavra_passe']
+        ':pass_word' => $utilizador['pass_word']
     ]);
 
 

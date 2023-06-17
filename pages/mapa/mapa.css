@@ -87,6 +87,38 @@ li a {
     text-decoration: none;
 }
 
+li button {
+    margin-left: 50px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(168, 124, 66,0);
+}
+li button:hover {
+    color: #fffefe;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-decoration: none;
+    
+}
+
+.login_form {
+    display: none;
+    position: fixed;
+    right: 15px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    color: white;
+  }
+
+.form_l{
+    max-width: 300px;
+    padding: 10px;
+    background-color:rgba(54, 54, 54);
+      
+}
+
+
 /*---------------------------space----------------------------*/
 #space{
     width: 100%;

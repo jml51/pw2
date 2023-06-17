@@ -16,7 +16,7 @@
 -->
 <script defer src="./registo.js"></script>
 
-<body >
+<body class="bg-secondary"  >
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container ">
             <a class="navbar-brand h1 col" href="">A furna</a>
@@ -40,7 +40,7 @@
         </div>
     </nav>
 
-    <main  class="container      bg-light">
+    <main  class="container   bg-light">
         <div class="row">
             <h2 class="text-center">criaçao de contas furna</h2>
             <section>
@@ -55,15 +55,13 @@
                 unset($_SESSION['erros']);
                 ?>
                  
-                    
-                </div>
-            </section>
+            </section>      
         </div>
-        <div class="container-fluid mh-100" >
+        <div class="row mh-100" >
 
             <form action="/src/controller/contr_registo.php" enctype="multipart/form-data" runat="server" method="post">
                 <div class="d-flex  mb-3"> 
-                    <div class="p-2 flex-fill ">
+                    <div class="col-sm-4 col-md-6 p-2 flex-fill ">
                         <p><label for="nome">nome</label></p>
                         <input type="text" name="nome"  id="nome"  required>
 
@@ -76,13 +74,16 @@
                         <p><label for="conf_pass">conferir password</label></p>
                         <input type="text" name="conf_pass"  id="conf_pass"  required>
                     </div>
-                    <!--
-                    <div class=" p-2 flex-fill  ">
+                    
+                    <div class=" col-sm-4 col-md-6 p-2 flex-fill  ">
+                        <h3>crie um aconta na furna</h3>
+                        <!--
                         <input accept="image/*" type="file" name="foto"  id="imgInp"  >
                         <p><label for="imgInp">foto</label></p>
                         <img id="blah" src="#" alt="your image" />
+                        -->
                     </div>
-                    -->
+                    
                 </div>    
                 <div>
                     <button type="submit" name="utilizador" value="registo" class="btn btn-primary justify-content-center">Submit</button>
