@@ -1,7 +1,8 @@
 <?php
     include_once __DIR__ . '/pages/templates/header.php';
 
-    session_start();
+    
+    
 
 ?>
 
@@ -32,62 +33,16 @@
                     </ul>
                 </div>
             </header>
+
+
+
             <?php
-            if(isset($_SESSION['id'])){
+
+                include_once __DIR__ . '/pages/templates/login_form.php';
+
             ?>
-                
-                <div class="login_form" id="form_login">
-                <div class="form_l">
-                    <h2>boas a tudos</h2>
-                    <?php
-                        echo '<table border="1">'."\n";
-                        echo '<tr><td>';
-                            echo ($_SESSION['id']);
-                        echo '</td><td>';
-                            echo ($_SESSION['nome']);
-                        echo '</tr>';
-                        echo '</table >';
-                    ?>
-                    <form action="./src/controller/contr_autenticar.php" method="post">
-                        <button class="btn btn-danger" type="submit"  name="utilizador" value="logout">Logout</button>
-                    </form>
-                </div>    
-            </div>
 
-            <?php 
-            }else{
-            ?>
-                <div class="login_form" id="form_login">
-                    <form action="/src/controller/contr_autenticar.php" method="post"  class="form-container form_l">
-                        <h3>Login</h3>
-                        <?php 
-                            if(isset($_SESSION['erros'])){
-                                echo '<div class="alert alert-danger">';
-                                foreach($_SESSION['erros'] as $error){
-                                    echo $error .'<br>';
-                                };
-                                echo '</div>';
-                            };
-                            unset($_SESSION['erros']);
-                        ?>
 
-                        <label for="email" class="form-label"><b>Email</b></label>
-                        <input class="form-control" type="text" placeholder="Enter Email" name="email"  required>
-
-                        <label for="psw" class="form-label"><b>Password</b></label>
-                        <input class="form-control" type="password" placeholder="Enter Password" name="pass"   required>
-
-                        <div class="container">
-                                <button class="btn btn-success" type="submit" name="utilizador" value="login">Login</button>
-                                <a href="./pages/registo/registo.php" class="btn btn-primary">registar</button></a>
-                        </div>    
-                    </form>
-                </div>
-                    
-              
-            <?php     
-            };    
-            ?>
 
 <div class="noscrooll" id="noscrooll">
     
@@ -112,7 +67,7 @@
                     <h3 class="he">Vilarinho da Furna</h3>
 
                     <div  >
-                        <img id="conimg" class="he"  style="max-width:100%; height:auto;" src="./fotos/transferir.jpeg" alt="">
+                        <img id="conimg" class="he"  style="max-width:100%; height:auto;" src="./images/transferir.jpeg" alt="">
                         <div  >
                             <p id="first-p" class="he "> 
                                 <br>
@@ -158,15 +113,15 @@
                     <div class="dropdown-ul" >
 
                         <div class="dropdown he" id="dropdown_1" >
-                            <a href=""><img  src="./fotos/transferir.jpeg" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
+                            <a href=""><img  src="./images/transferir.jpeg" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
                         </div>
                     
                         <div class="dropdown he" id="dropdown_2">
-                            <a href="./pages/furna/furna.php"><img  src="./fotos/logo-associao.png" alt="Cinque Terre" width="110" height="110"  style="margin-left: 60px; border-radius: 5px;"></a>
+                            <a href="./pages/furna/furna.php"><img  src="./images/logo-associao.png" alt="Cinque Terre" width="110" height="110"  style="margin-left: 60px; border-radius: 5px;"></a>
                         </div>
 
                         <div class="dropdown he" id="dropdown_3">
-                            <a href="./pages/mapa/mapa.php"><img  src="./fotos/mapa.png" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
+                            <a href="./pages/mapa/mapa.php"><img  src="./images/mapa.png" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
                         </div>   
                     </div>
                     

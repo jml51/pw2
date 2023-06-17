@@ -1,7 +1,6 @@
 <?php
     include_once __DIR__ . '../../../pages/templates/header.php';
 
-    session_start();
 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
@@ -23,52 +22,13 @@
         </ul>
         </div>
     </header>
+
+
     <?php
-            if(isset($_SESSION['id'])){
-            ?>
-                
-                <div class="login_form" id="form_login">
-                <div class="form_l">
-                    <h2>boas a tudos</h2>
-                    <?php
-                        echo '<table border="1">'."\n";
-                        echo '<tr><td>';
-                            echo ($_SESSION['id']);
-                        echo '</td><td>';
-                            echo ($_SESSION['nome']);
-                        echo '</tr>';
-                        echo '</table >';
-                    ?>
-                    <form action="/src/controller/contr_autenticar.php" method="post">
-                        <button class="btn btn-danger" type="submit"  name="utilizador" value="logout">Logout</button>
-                    </form>
-                </div>    
-            </div>
+        include_once __DIR__ . '../../../pages/templates/login_form.php';
+    ?>
 
-            <?php 
-            }else{
-            ?>
-                <div class="login_form"  id="form_login">
-                    <form action="/src/controller/contr_autenticar.php" method="post"  class="form-container form_l">
-                        <h3>Login</h3>
 
-                        <label for="email" class="form-label"><b>Email</b></label>
-                        <input class="form-control" type="text" placeholder="Enter Email" name="email"  required>
-
-                        <label for="psw" class="form-label"><b>Password</b></label>
-                        <input class="form-control" type="password" placeholder="Enter Password" name="pass"   required>
-
-                        <div class="container">
-                                <button class="btn btn-success" type="submit" name="utilizador" value="login">Login</button>
-                                <a href="./pages/registo/registo.php" class="btn btn-primary">registar</button></a>
-                        </div>    
-                    </form>
-                </div>
-                    
-              
-            <?php     
-            };    
-            ?>
     <section id="space"></section>
     <div id="fake_body">
 
@@ -77,7 +37,7 @@
         
         <div id="left">
             <div  >
-                <img src="../../fotos/arrow-down-circle.svg" alt=""id="btn-" onclick="plusSlides(-1)"> 
+                <img src="../../images/arrow-down-circle.svg" alt=""id="btn-" onclick="plusSlides(-1)"> 
                 <h2>Como chegar</h2>
                 <div id="textm" class="fade_ block" >
                     <p >
@@ -100,7 +60,7 @@
             </div>
         </div>
         <div id="right">
-            <img src="../../fotos/arrow-down-circle.svg" alt="" id="btn" onclick="plusSlides(1)"> 
+            <img src="../../images/arrow-down-circle.svg" alt="" id="btn" onclick="plusSlides(1)"> 
             <div class="fade_ block2">
                 <iframe 
                     id="mapa"
@@ -116,7 +76,7 @@
                 
             </div> 
             <div  class="fade_ block2">
-                <img src="../../fotos/trilha.png" alt="" style="height: 450px; width: 650px; border-radius: 8px;margin: 60px 28px 0px 0px ;  float: right;">
+                <img src="../../images/trilha.png" alt="" style="height: 450px; width: 650px; border-radius: 8px;margin: 60px 28px 0px 0px ;  float: right;">
             </div>   
         </div>
         

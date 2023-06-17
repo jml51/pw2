@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php 
+        session_start();
+
+        $page = $_SERVER['PHP_SELF'];
+
+        include_once __DIR__ . '../../../src/utils/auxiliadores.php';
+
+        $utilizador = utilizador();
+?>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
         <meta charset="UTF-8"/>
