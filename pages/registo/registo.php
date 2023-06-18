@@ -1,6 +1,8 @@
 <?php
     include_once __DIR__ . '../../../pages/templates/header.php';
 
+    include_once __DIR__ . '/../../src/middleware/nao_autenticado.php';
+
     session_start();
 ?>
 
