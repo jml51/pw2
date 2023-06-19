@@ -14,18 +14,24 @@
                         echo '</tr>';
                         echo '</table >';
                     ?>
-                    <form action="/src/controller/contr_autenticar.php" method="post">
-                        <input type="hidden" name="page" value="<?php echo $page; ?>">
-                        <button class="btn btn-danger" type="submit"  name="utilizador" value="logout">Logout</button>
-                        <?php
-                        if(admin()){
-                        ?>    
-                            <button class="btn btn-primary" type="submit"  name="utilizador" value="admin">administraçao</button>
-                        <?php
-                        }
-                        ?>
+                    <div class="container ">
                         
-                    </form>
+                            <form class="form-container" action="/src/controller/client/contr_autenticar.php" method="post">
+                                <input type="hidden" name="page" value="<?php echo $page; ?>">
+                                <button class="btn btn-danger" type="submit"  name="utilizador" value="logout">Logout</button>
+                                <?php
+                                if(admin()){
+                                ?>    
+                                   <a class="col-4 btn btn-primary"  style="text-decoration: none;  color: white;" href="/pages/admin/administraçao/administraçao.php">administraçao</a>
+                                <?php
+                                }else{
+                                ?>
+                                   <a class="col-4 btn btn-success"style="text-decoration: none;  color: white;" href="/pages/perfil/perfil.php">Perfil</a>
+                                <?php
+                                }
+                                ?>
+                            </form>    
+                    </div>
                 </div>    
             </div>
 
@@ -33,7 +39,7 @@
             }else{
             ?>
                 <div class="login_form" id="form_login">
-                    <form action="/src/controller/contr_autenticar.php" method="post"  class="form-container form_l">
+                    <form action="/src/controller/client/contr_autenticar.php" method="post"  class="form-container form_l">
                         <h3>Login</h3>
                         <?php 
                             if(isset($_SESSION['erros'])){

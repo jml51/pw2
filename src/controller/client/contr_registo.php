@@ -2,9 +2,9 @@
 
 session_start();
 
-include_once __DIR__.'/../../src/validation/val_registo.php';
+include_once __DIR__.'/../../../src/validation/client/val_registo.php';
 
-include_once __DIR__.'/../../database/repositorio.php';
+include_once __DIR__.'/../../../database/repositorio.php';
 
 
 if(isset($_POST['utilizador'])){

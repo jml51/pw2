@@ -12,10 +12,11 @@ $pdo->exec(
         nome CHAR,  
         nif CHAR,  
         email CHAR NOT NULL, 
+        telemovel   INTEGER,
         foto CHAR NULL, 
         administrador CHAR, 
         dono CHAR,
-        pass_word CHAR
+        pass_word CHAR NOT NULL
     ); 
 ');
 
@@ -25,9 +26,10 @@ $utilizador = [
     'nome'          => 'jose',
     'nif'           => '975864532',
     'email'         => 'jose@gmail.com',
-    'foto'          => null,
-    'administrador' => true,
-    'dono'          => true,
+    'telemovel'     => '962701260',
+    'foto'          =>  null,
+    'administrador' =>  true,
+    'dono'          =>  true,
     'pass_word' => '123456'
 
 ];
@@ -39,6 +41,7 @@ $sql = ('INSERT INTO utilizadores(
             nome,
             nif,
             email,
+            telemovel,
             foto,
             administrador,
             dono,
@@ -47,6 +50,7 @@ $sql = ('INSERT INTO utilizadores(
             :nome,
             :nif,
             :email,
+            :telemovel,
             :foto,
             :administrador,
             :dono,
@@ -59,6 +63,7 @@ $sql = ('INSERT INTO utilizadores(
         ':nome'          => $utilizador['nome'],
         ':nif'           => $utilizador['nif'],
         ':email'         => $utilizador['email'],
+        ':telemovel'     => $utilizador['telemovel'],
         ':foto'          => $utilizador['foto'],
         ':administrador' => $utilizador['administrador'],
         ':dono'          => $utilizador['dono'],

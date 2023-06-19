@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     include_once __DIR__.'/../../database/repositorio.php';
 
 
@@ -13,8 +15,20 @@ function autenticado(){
 function utilizador(){
 
     if(autenticado()){
-        
+                
         return utilizador_data($_SESSION['id']);
+    }else{
+        
+        return false;
+    }
+}
+
+function utilizadorId(){
+
+    if(autenticado()){
+                
+        return  $_SESSION['id'];
+        
     }else{
         
         return false;

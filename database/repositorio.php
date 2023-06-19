@@ -61,4 +61,80 @@
     }
     
 
-?>
+function atual_utilizador($dados){
+
+    if(isset($dados['pass_word']) && !empty($dados['pass_word'])){
+
+        //$dados['pass_word'] = password_hash($dados['pass_word'],PASSWORD_DEFAULT);
+
+        $sql = "UPDATE utilizadores SET
+            nome            = :nome,
+            nif             = :nif,
+            email           = :email,        
+            telemovel       = :telemovel,        
+            foto            = :foto,        
+            administrador   = :administrador,        
+            dono            = :dono,        
+            pass_word       = :pass_word        
+        WHERE id = :id;    ";
+
+        $update = $GLOBALS['pdo']->prepare($sql);
+
+         return $update->execute([
+            ':id'              => $dados['id'],
+            ':nome'            => $dados[' nome'],
+            ':nif'             => $dados[' nif'],
+            ':email'           => $dados[' email'],        
+            ':telemovel'       => $dados[' telemovel'],        
+            ':foto'            => $dados[' foto'],        
+            ':administrador'   => $dados[' administrador'],        
+            ':dono'            => $dados[' dono'],        
+            ':pass_word'       => $dados[' pass_word'] 
+
+         ]); 
+
+    }else{
+        $sql = "UPDATE utilizadores SET
+            nome            = :nome,
+            nif             = :nif,
+            email           = :email,        
+            telemovel       = :telemovel,        
+            foto            = :foto,        
+            administrador   = :administrador     
+        WHERE id = :id;";
+
+        $update = $GLOBALS['pdo']->prepare($sql);
+
+        return $update->execute([
+            ':id'              => $dados['id'],
+            ':nome'            => $dados['nome'],
+            ':nif'             => $dados['nif'],
+            ':email'           => $dados['email'],        
+            ':telemovel'       => $dados['telemovel'],        
+            //':foto'            => $dados['foto'],        
+            ':administrador'   => $dados['administrador']           
+        ]); 
+
+    }
+}
+
+function atualizar_password($dados){
+    if(isset($dados['pass_word']) && !empty($dados['pass_word'])){
+
+        $dados['pass_word'] = password_hash($dados['pass_word'],PASSWORD_DEFAULT);
+
+        $sql = "UPDATE utilizadores SET
+            nome            = :nome,      
+            pass_word       = :pass_word        
+        WHERE id = :id;";
+
+        $update = $GLOBALS['pdo']->prepare($sql);
+
+         return $update->execute([
+            ':id'              => $dados['id'],
+            ':nome'            => $dados['nome'],       
+            ':pass_word'       => $dados['pass_word'] 
+         ]); 
+
+    }
+}

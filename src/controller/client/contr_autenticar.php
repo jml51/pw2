@@ -2,9 +2,9 @@
 
 session_start();
 
-include_once __DIR__.'/../../database/repositorio.php';
+include_once __DIR__.'/../../../database/repositorio.php';
 
-include_once __DIR__.'/../../src/validation/val_login.php';
+include_once __DIR__.'/../../../src/validation/client/val_login.php';
 
 
 if(isset($_POST['utilizador'])){

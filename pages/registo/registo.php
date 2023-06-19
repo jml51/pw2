@@ -61,7 +61,7 @@
         </div>
         <div class="row mh-100" >
 
-            <form action="/src/controller/contr_registo.php" enctype="multipart/form-data" runat="server" method="post">
+            <form action="/src/controller/client/contr_registo.php" enctype="multipart/form-data" runat="server" method="post">
                 <div class="d-flex  mb-3"> 
                     <div class="col-sm-4 col-md-6 p-2 flex-fill ">
                         <p><label for="nome">nome</label></p>
