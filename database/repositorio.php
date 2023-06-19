@@ -28,6 +28,18 @@
 
     }
 
+    function todos_utilizadores(){
+        $get = $GLOBALS['pdo']->query('SELECT*FROM utilizadores;'); 
+
+        $utilizadores = [];
+
+        while($lista  = $get->fetch()){
+            $utilizadores[] = $lista;   
+        }
+
+        return $utilizadores;
+    }
+
 
     function registar_utilizador($data){
 

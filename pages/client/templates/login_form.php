@@ -26,7 +26,7 @@
                                 <?php
                                 }else{
                                 ?>
-                                   <a class="col-4 btn btn-success"style="text-decoration: none;  color: white;" href="/pages/perfil/perfil.php">Perfil</a>
+                                   <a class="col-4 btn btn-success"style="text-decoration: none;  color: white;" href="/pages/client/perfil/perfil.php">Perfil</a>
                                 <?php
                                 }
                                 ?>
@@ -62,7 +62,7 @@
 
                         <div class="container">
                                 <button class="btn btn-success" type="submit" name="utilizador" value="login">Login</button>
-                                <a href="./pages/registo/registo.php" class="btn btn-primary">registar</button></a>
+                                <a href="/pages/client/registo/registo.php" class="btn btn-primary">registar</button></a>
                         </div>    
                     </form>
                 </div>

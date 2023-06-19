@@ -1,7 +1,7 @@
 html{
     
     scroll-behavior: smooth;
-    background-image: url("../../images/environment/Vilarinho-da-Furna.jpg");
+    background-image: url("/images/environment/Vilarinho-da-Furna.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
@@ -134,7 +134,7 @@ h3{
     width: 75%;
     height: 100%;
     margin-left: 180px;
-    background-image: url("../../images/environment/209-974-Nordik-Stone-Black.jpg");
+    background-image: url("/images/environment/209-974-Nordik-Stone-Black.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     display: grid;
@@ -300,7 +300,7 @@ img {
 }
 */
 .display_1{
-    background-image: url("../../images/environment/transferir.jpeg");
+    background-image: url("/images/environment/transferir.jpeg");
     width: 300px;
     height: 168px;
     background-repeat: no-repeat;
@@ -308,7 +308,7 @@ img {
     transition: 500ms;
 }
 .display_2{
-    background-image: url("../../images/environment/logo-associao.png");
+    background-image: url("/images/environment/logo-associao.png");
     width: 150px ;
     height: 150px;
     background-repeat: no-repeat;
@@ -320,7 +320,7 @@ img {
 .display_3{
     width: 300px;
     height: 168px;
-    background-image: url("../../images/environment/mapa.png");
+    background-image: url("/images/environment/mapa.png");
     background-repeat: no-repeat;
     background-size: cover;
     transition: 500ms;

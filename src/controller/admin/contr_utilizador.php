@@ -33,7 +33,7 @@ function atual_perfil($post){
 
         $params = '?' . http_build_query($post);
 
-        header('location: /pages/perfil/perfil.php'. $params );
+        header('location: /pages/client/perfil/perfil.php'. $params );
 
     }else{
 
@@ -55,7 +55,7 @@ function atual_perfil($post){
 
             $_SESSION['acao']    = 'atualizar';
 
-            header('location: /pages/perfil/perfil.php');
+            header('location: /pages/client/perfil/perfil.php');
         }
 
     }
@@ -71,7 +71,7 @@ function atual_pass($post){
 
         $_SESSION['erros'] = $data['invalido'];
 
-        header('location: /pages/perfil/pass_word.php');
+        header('location: /pages/client/perfil/pass_word.php');
 
     }else{
         //
@@ -86,7 +86,7 @@ function atual_pass($post){
 
             $_SESSION['acao']    = 'atualizar_password';
 
-            header('location: /pages/perfil/pass_word.php');
+            header('location: /pages/client/perfil/pass_word.php');
 
         }
     }

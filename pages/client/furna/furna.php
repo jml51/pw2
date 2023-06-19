@@ -1,6 +1,6 @@
 <?php
 
-    include_once __DIR__ . '../../../pages/templates/header.php'
+    include_once __DIR__ . '/../../../pages/client/templates/header.php'
     
 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -21,7 +21,7 @@
             
                 <div class="nav">
                     <ul class="navul">
-                        <li><a href="../../index.php">Home</a></li>
+                        <li><a href="/index.php">Home</a></li>
                         <li><a href="../furna/furna.php">A Furna</a></li>
                         <li><a href="../mapa/mapa.php">MAPA</a></li>
                         <li class="col"><button id="login_abrir" >conta</button></li>
@@ -31,7 +31,7 @@
 
 
         <?php
-            include_once __DIR__ . '../../../pages/templates/login_form.php';
+            include_once __DIR__ . '/../../../pages/client/templates/login_form.php';
         ?>
 
 
@@ -40,7 +40,7 @@
                 <a href="https://afurna.pt/">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img  src="../../images/environment/logo-associao.png" alt="Avatar" >
+                            <img  src="/images/environment/logo-associao.png" alt="Avatar" >
                         </div>
                         <div class="flip-card-back">
                             <p></p>
@@ -80,5 +80,5 @@
         
         
 <?php
-    include_once __DIR__ . '../../../pages/templates/rodape.php'
+    include_once __DIR__ . '/../../../pages/client/templates/rodape.php'
 ?>

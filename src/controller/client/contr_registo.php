@@ -21,7 +21,7 @@ function registar($post){
 
         $_SESSION['erros'] = $data['validade'];
 
-        header('location: /pages/registo/registo.php');
+        header('location: /pages/client/registo/registo.php');
 
     }else{
 

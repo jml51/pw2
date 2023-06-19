@@ -1,5 +1,5 @@
 <?php
-    include_once __DIR__ . '../../../pages/templates/header.php';
+    include_once __DIR__ . '/../../../pages/client/templates/header.php';
 
 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -15,7 +15,7 @@
         </h1>
         <div class="nav">
         <ul class="navul">
-            <li><a href="../../index.php">Home</a></li>
+            <li><a href="/index.php">Home</a></li>
             <li><a href="../furna/furna.php">A Furna</a></li>
             <li><a href="../mapa/mapa.php">MAPA</a></li>
             <li class="col"><button id="login_abrir" >conta</button></li>
@@ -25,7 +25,7 @@
 
 
     <?php
-        include_once __DIR__ . '../../../pages/templates/login_form.php';
+        include_once __DIR__ . '/../../../pages/client/templates/login_form.php';
     ?>
 
 
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div id="right">
-            <img src="../../images/environment/arrow-down-circle.svg" alt="" id="btn" onclick="plusSlides(1)"> 
+            <img src="/images/environment/arrow-down-circle.svg" alt="" id="btn" onclick="plusSlides(1)"> 
             <div class="fade_ block2">
                 <iframe 
                     id="mapa"
@@ -76,7 +76,7 @@
                 
             </div> 
             <div  class="fade_ block2">
-                <img src="../../images/environment/trilha.png" alt="" style="height: 450px; width: 650px; border-radius: 8px;margin: 60px 28px 0px 0px ;  float: right;">
+                <img src="/images/environment/trilha.png" alt="" style="height: 450px; width: 650px; border-radius: 8px;margin: 60px 28px 0px 0px ;  float: right;">
             </div>   
         </div>
         
@@ -86,5 +86,5 @@
     </div>
     </div>
 <?php
-    include_once __DIR__ . '../../../pages/templates/rodape.php'
+    include_once __DIR__ . '/../../../pages/client/templates/rodape.php'
 ?>

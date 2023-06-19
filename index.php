@@ -1,17 +1,17 @@
 <?php
-    include_once __DIR__ . '/pages/templates/header.php';
+    include_once __DIR__ . '/pages/client/templates/header.php';
 
     
     
-
+    
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
 
-<link rel="stylesheet" href="./pages/main/index.css" />
+<link rel="stylesheet" href="/pages/client/main/index.css" />
 
-<script defer src="./pages/main/index.js"></script>
+<script defer src="/pages/client/main//index.js"></script>
 
 <body id="body" onload="addload()">
         
@@ -27,8 +27,8 @@
                     <ul class="navul row">
                         <li class="col"><button id="btnscrollup">BACK</button></li>
                         <li class="col"><a href="index.php">Home</a></li>
-                        <li class="col"><a href="./pages/furna/furna.php">A Furna</a></li>
-                        <li class="col"><a href="./pages/mapa/mapa.php">MAPA</a></li>
+                        <li class="col"><a href="./pages/client/furna/furna.php">A Furna</a></li>
+                        <li class="col"><a href="./pages/client/mapa/mapa.php">MAPA</a></li>
                         <li class="col"><button id="login_abrir" >conta</button></li>
                     </ul>
                 </div>
@@ -38,7 +38,7 @@
 
             <?php
 
-                include_once __DIR__ . '/pages/templates/login_form.php';
+                include_once __DIR__ . '/pages/client/templates/login_form.php';
 
             ?>
 
@@ -117,11 +117,11 @@
                         </div>
                     
                         <div class="dropdown he" id="dropdown_2">
-                            <a href="./pages/furna/furna.php"><img  src="./images/environment/logo-associao.png" alt="Cinque Terre" width="110" height="110"  style="margin-left: 60px; border-radius: 5px;"></a>
+                            <a href="./pages/client/furna/furna.php"><img  src="./images/environment/logo-associao.png" alt="Cinque Terre" width="110" height="110"  style="margin-left: 60px; border-radius: 5px;"></a>
                         </div>
 
                         <div class="dropdown he" id="dropdown_3">
-                            <a href="./pages/mapa/mapa.php"><img  src="./images/environment/mapa.png" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
+                            <a href="./pages/client/mapa/mapa.php"><img  src="./images/environment/mapa.png" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
                         </div>   
                     </div>
                     
@@ -149,5 +149,5 @@
         </section>
  
 <?php
-    include_once __DIR__ . '/pages/templates/rodape.php'
+    include_once __DIR__ . '/pages/client/templates/rodape.php'
 ?>
