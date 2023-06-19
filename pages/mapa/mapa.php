@@ -37,7 +37,7 @@
         
         <div id="left">
             <div  >
-                <img src="../../images/arrow-down-circle.svg" alt=""id="btn-" onclick="plusSlides(-1)"> 
+                <img src="../../images/environment/arrow-down-circle.svg" alt=""id="btn-" onclick="plusSlides(-1)"> 
                 <h2>Como chegar</h2>
                 <div id="textm" class="fade_ block" >
                     <p >
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div id="right">
-            <img src="../../images/arrow-down-circle.svg" alt="" id="btn" onclick="plusSlides(1)"> 
+            <img src="../../images/environment/arrow-down-circle.svg" alt="" id="btn" onclick="plusSlides(1)"> 
             <div class="fade_ block2">
                 <iframe 
                     id="mapa"
@@ -76,7 +76,7 @@
                 
             </div> 
             <div  class="fade_ block2">
-                <img src="../../images/trilha.png" alt="" style="height: 450px; width: 650px; border-radius: 8px;margin: 60px 28px 0px 0px ;  float: right;">
+                <img src="../../images/environment/trilha.png" alt="" style="height: 450px; width: 650px; border-radius: 8px;margin: 60px 28px 0px 0px ;  float: right;">
             </div>   
         </div>
         

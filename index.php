@@ -67,7 +67,7 @@
                     <h3 class="he">Vilarinho da Furna</h3>
 
                     <div  >
-                        <img id="conimg" class="he"  style="max-width:100%; height:auto;" src="./images/transferir.jpeg" alt="">
+                        <img id="conimg" class="he"  style="max-width:100%; height:auto;" src="./images/environment/transferir.jpeg" alt="">
                         <div  >
                             <p id="first-p" class="he "> 
                                 <br>
@@ -113,15 +113,15 @@
                     <div class="dropdown-ul" >
 
                         <div class="dropdown he" id="dropdown_1" >
-                            <a href=""><img  src="./images/transferir.jpeg" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
+                            <a href=""><img  src="./images/environment/transferir.jpeg" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
                         </div>
                     
                         <div class="dropdown he" id="dropdown_2">
-                            <a href="./pages/furna/furna.php"><img  src="./images/logo-associao.png" alt="Cinque Terre" width="110" height="110"  style="margin-left: 60px; border-radius: 5px;"></a>
+                            <a href="./pages/furna/furna.php"><img  src="./images/environment/logo-associao.png" alt="Cinque Terre" width="110" height="110"  style="margin-left: 60px; border-radius: 5px;"></a>
                         </div>
 
                         <div class="dropdown he" id="dropdown_3">
-                            <a href="./pages/mapa/mapa.php"><img  src="./images/mapa.png" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
+                            <a href="./pages/mapa/mapa.php"><img  src="./images/environment/mapa.png" alt="Cinque Terre" width="225" height="110" style="border-radius: 5px;"></a>
                         </div>   
                     </div>
                     

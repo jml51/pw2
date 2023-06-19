@@ -40,7 +40,7 @@
                 <a href="https://afurna.pt/">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img  src="../../images/logo-associao.png" alt="Avatar" >
+                            <img  src="../../images/environment/logo-associao.png" alt="Avatar" >
                         </div>
                         <div class="flip-card-back">
                             <p></p>

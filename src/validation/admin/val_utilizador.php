@@ -22,7 +22,7 @@ function val_utilizador($data){
     if(!filter_var($data['telemovel'],  FILTER_VALIDATE_INT) || strlen($data['telemovel']) != 9){
         $erros['conf_pass'] = 'O seu nif nao pode estar vazio e tem de ter 9 caracteres';
     }
-/*
+
     if (isset(($_FILES['foto']['name'])) && ($_FILES['foto']['error'] == UPLOAD_ERR_OK)) {
 
         # DEFINE A LARGURA MÁXIMA DO FICHEIRO
@@ -70,7 +70,7 @@ function val_utilizador($data){
     
         
         $data['administrador'] = !empty($data['administrador']) == 'on' ? true : false;
-    */
+    
     
         # RETORNA ERROS
         if (isset($erros)) {

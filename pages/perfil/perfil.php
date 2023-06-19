@@ -51,7 +51,7 @@
                     
                 }
             ?>    
-            <form runat="server" enctype="multipart/form-data" action="/src/controller/admin/contr_utilizador.php" method="post"  class="form-control py-4">
+            <form enctype="multipart/form-data" runat="server"  action="/src/controller/admin/contr_utilizador.php" method="post"  class="form-control py-4">
                 <div class="input-group mb-4">
                     <span class="input-group-text">Nome</span>
                     <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : $utilizador['nome'] ?>" >

@@ -6,6 +6,7 @@ require_once __DIR__ .'/../../../src/validation/admin/val_pass.php';
 require_once __DIR__ .'/../../../src/utils/auxiliadores.php';
 
 
+
 if(isset($_POST['utilizador'])){
 
     if($_POST['utilizador'] == 'perfil' ){
@@ -40,13 +41,13 @@ function atual_perfil($post){
 
         $dados['id'] = $utilizador['id'];
         $dados['administrador'] = $utilizador['administrador'];
-/*
-        if(!empty($dados['foto'])){
 
-            //$dados = save_foto($dados,$utilizador);
+        if(!empty($_FILES['foto']['name'])){
+
+            $dados = save_foto($dados, $utilizador);
 
         }
-*/
+
         $update = atual_utilizador($dados);
 
         if($update){
@@ -91,18 +92,48 @@ function atual_pass($post){
     }
 }
 
+function save_foto($dados, $fotoAntiga = null)
+{
+    
+    $nomeFicheiro = $_FILES['foto']['name'];
+
+    
+    $ficheiroTemporario = $_FILES['foto']['tmp_name'];
+
+    
+    $extensao = pathinfo($nomeFicheiro, PATHINFO_EXTENSION);
+
+    
+    $extensao = strtolower($extensao);
+
+    
+    $novoNome = uniqid('foto_') . '.' . $extensao;
+
+    $caminhoFicheiro = __DIR__ . '/../../../images/upload/';
+
+    
+    $ficheiro = $caminhoFicheiro . $novoNome;
+
+    
+    if (move_uploaded_file($ficheiroTemporario, $ficheiro)) {
+
+       
+        $dados['foto'] = $novoNome;
 
 
+        if (isset($dados['utilizador']) && ($dados['utilizador'] == 'atualizar') || ($dados['utilizador'] == 'perfil')) {
 
+            unlink($caminhoFicheiro . $fotoAntiga['foto']);
+        }
+    }
 
-
-
-
-
-
-
-
-
-function  save_foto($dados,$utilizador){
-
+    # RETORNA OS DADOS DO FICHEIRO PARA GARDAR NA BASE DE DADOS
+    return $dados;
 }
+
+
+
+
+
+
+
