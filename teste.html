@@ -44,3 +44,15 @@
                     </ul>
                 </div>
         </header>
+
+
+
+        foreach($ultimo as $ult_data){
+            echo '<tr><th>';
+            echo $ult_data['nome'];
+            echo '</th><th>';
+            echo $ult_data['email'];
+            echo '</th><th>';
+            echo $ult_data['telemovel'];
+            echo '</th></tr>';
+        }

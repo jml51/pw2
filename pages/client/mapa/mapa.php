@@ -1,6 +1,10 @@
 <?php
     include_once __DIR__ . '/../../../pages/client/templates/header.php';
 
+    include_once __DIR__ . '/../../../database/request.php';
+
+    $data = mapa();
+
 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
@@ -41,11 +45,9 @@
                 <h2>Como chegar</h2>
                 <div id="textm" class="fade_ block" >
                     <p >
-                        O acesso à zona onde a aldeia se encontra submersa é feito através de um caminho em terra batida de uso 
-                        privado dos antigos habitantes de Vilarinho da Furna. O acesso de carro é por vezes possível durante os 
-                        meses de verão, mediante o pagamento de uma taxa de acesso pela associação “A Furna”, de forma a promover 
-                        a manutenção da memória dos hábitos e costumes da antiga aldeia. <br>
-                        Durante o resto do ano, o acesso é apenas possível de forma pedonal.
+                        <?php 
+                            echo $data['texto1']; 
+                        ?>
                     </p>
                 </div> 
             </div>

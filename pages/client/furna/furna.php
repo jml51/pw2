@@ -1,7 +1,11 @@
 <?php
 
-    include_once __DIR__ . '/../../../pages/client/templates/header.php'
-    
+    include_once __DIR__ . '/../../../pages/client/templates/header.php';
+
+    include_once __DIR__ . '/../../../database/request.php';
+
+    $data = furna();
+
 ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
@@ -40,14 +44,13 @@
                 <a href="https://afurna.pt/">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img  src="/images/environment/logo-associao.png" alt="Avatar" >
+                            <img  src=<?="$data[img1]"; ?> alt="Avatar" >
                         </div>
                         <div class="flip-card-back">
                             <p></p>
-                            <h2>Associação AFURNA</h2> 
+                            <h2><?php echo $data['titulo']; ?></h2> 
                             <p>
-                                fundada em Outubro de 1985 <br>
-                                AFURNA tem por objectivo a defesa, valorização <br> e promoção do património cultural, colectivo e/ou <br> comunitário do antigo povo de Vilarinho da Furna
+                                <?php echo $data['texto1']; ?>
                             </p> 
                         
                         </div>
@@ -61,16 +64,10 @@
             <section id="space" class="container-fluid" >
                 <section>
                     <p id="info">
-                        Com sede no Museu Etnográfico de Vilarinho da Furna, “AFURNA – 
-                        Associação dos Antigos Habitantes de Vilarinho da Furna” é uma 
-                        instituição cultural, dotada de personalidade jurídica, que tem 
-                        como objetivo <br> a defesa, valorização e promoção do património cultural, 
-                        coletivo e/ou comunitário, do antigo povo de Vilarinho da Furna, 
-                        desenvolvendo atividades sociais para benefício dos ex-habitantes de Vilarinho 
-                        da Furna e seus familiares.
-                        Desde a sua criação, em outubro de 1985, AFURNA tem, além das atividades ambientais, 
-                        lutado pela preservação da história e da cultura desse povo tão peculiar.
-                        </p>
+                        <?php 
+                            echo $data['texto2']; 
+                        ?>
+                    </p>
                 </section>
             </section>
         </div>

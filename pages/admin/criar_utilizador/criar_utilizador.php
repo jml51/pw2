@@ -15,12 +15,6 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!--<link rel="stylesheet" href="./pages/main/index.css" />
-
-
-
--->
-<script defer src="./registo.js"></script>
 
 <body class="bg-secondary"  >
 
@@ -38,32 +32,56 @@
                 };
                 unset($_SESSION['erros']);
                 ?>
+                
                  
             </section>      
         </div>
         <div class="row mh-100" >
 
-            <form action="/src/controller/client/contr_registo.php" enctype="multipart/form-data" runat="server" method="post">
-                <div class="d-flex  mb-3"> 
-                    <div class="col-sm-4 col-md-6 p-2 flex-fill ">
-                        <p><label for="nome">nome</label></p>
-                        <input type="text" name="nome"  id="nome"  required>
+        <form action="/src/controller/admin/contr_utilizador.php" enctype="multipart/form-data" runat="server" method="post">
+                
+                <div class="  mb-3"> 
+                    <div class="row">
+                        <div class="col-5 p-2  ">
+                            <div class="input-group mb-3 input-group">
+                                <span class="input-group-text">nome</span>  
+                                <input class="form-control" type="text" name="nome"  id="nome"  value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] :null ?>" required>
+                            </div>
+                            <div class="input-group mb-3 input-group">
+                                <span class="input-group-text">e-mail</span>
+                                <input class="form-control" type="text" name="email"  id="email" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] :null ?>" required>
+                            </div>
+                            <div class="input-group mb-3 input-group">
+                                <span class="input-group-text">pass word</span>
+                                <input class="form-control" type="password" name="pass_word"  id="pass_word"  >
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" name="administrador" role="switch" id="flexSwitchCheckChecked" <?= isset($_REQUEST['administrador']) && $_REQUEST['administrador'] == true ? 'checked' : null ?>>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Administrador</label>
+                            </div>
+                        </div> 
+                        <div class="col-1"></div>
+                        <div class="col-5 p-2  ">   
+                            <div class="input-group mb-3 ">
+                                <span class="input-group-text">nif</span>
+                                <input class="form-control" type="text" name="nif"  id="nif" value="<?= isset($_REQUEST['nif']) ? $_REQUEST['nif'] :null ?>"  required>
+                            </div>
+                            <div class="input-group mb-3 ">
+                                <span class="input-group-text">telemovel</span>
+                                <input class="form-control" type="text" name="telemovel"  id="telemovel" value="<?= isset($_REQUEST['telemovel']) ? $_REQUEST['telemovel'] :null ?>" required>
+                            </div>
+                            <div class=" mb-3 ">
+                                <label for="imgInp" class="input-text">foto</label>
+                                <input id="imgInp" accept="image/*" type="file" class="form-control" name="foto">
+                            </div>
+                            <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
+                            <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
 
-                        <p><label for="email">e-mail</label></p>
-                        <input type="text" name="email"  id="email"  required>
-
-                        <p><label for="pass_word">pass word</label></p>
-                        <input type="password" name="pass_word"  id="pass_word"  required>
-
-                        <p><label for="conf_pass">conferir password</label></p>
-                        <input type="text" name="conf_pass"  id="conf_pass"  required>
+                        </div>    
                     </div>
-                    
-
-                    
-                </div>    
+                </div >    
                 <div>
-                    <button type="submit" name="utilizador" value="registo" class="btn btn-primary justify-content-center">Submit</button>
+                    <button type="submit" name="utilizador"  class="btn btn-primary justify-content-center" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Submit</button>
                 </div>
             </form>
 

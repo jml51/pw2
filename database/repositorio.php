@@ -28,6 +28,24 @@
 
     }
 
+
+
+    function ultimos(){
+
+        $get = $GLOBALS['pdo']->query('SELECT id, nome, email, administrador FROM utilizadores ORDER BY id DESC LIMIT 4;');
+
+        $utilizadores = [];
+
+        while($lista  = $get->fetch()){
+            $utilizadores[] = $lista;   
+        }
+        
+        return $utilizadores;
+
+    }
+
+
+
     function todos_utilizadores(){
         $get = $GLOBALS['pdo']->query('SELECT*FROM utilizadores;'); 
 
@@ -72,12 +90,53 @@
         return false;
     }
     
+function criarUtilizador($dados){
+
+    $dados['pass_word'] = password_hash($dados['pass_word'],PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO utilizadores(
+            nome,            
+            nif,          
+            email,                
+            telemovel,           
+            foto,             
+            administrador,                  
+            pass_word) 
+        VALUES(  
+            :nome,
+            :nif,
+            :email,  
+            :telemovel,    
+            :foto, 
+            :administrador,
+            :pass_word 
+        )";
+
+    $request = $GLOBALS['pdo']->prepare($sql);
+
+
+    $post = $request->execute([
+        ':nome'         => $dados['nome'],
+        ':nif'          => $dados['nif'],
+        ':email'        => $dados['email'],
+        ':telemovel'    => $dados['telemovel'],
+        ':foto'         => $dados['foto'],
+        ':administrador'=> $dados['administrador'],
+        ':pass_word'    => $dados['pass_word']
+    ]);
+
+    if ($post) {
+        $utilizador['id'] = $GLOBALS['pdo']->lastInsertId();
+    }
+
+    return $post;
+}
 
 function atual_utilizador($dados){
 
     if(isset($dados['pass_word']) && !empty($dados['pass_word'])){
 
-        //$dados['pass_word'] = password_hash($dados['pass_word'],PASSWORD_DEFAULT);
+        $dados['pass_word'] = password_hash($dados['pass_word'],PASSWORD_DEFAULT);
 
         $sql = "UPDATE utilizadores SET
             nome            = :nome,
@@ -123,7 +182,7 @@ function atual_utilizador($dados){
             ':nif'             => $dados['nif'],
             ':email'           => $dados['email'],        
             ':telemovel'       => $dados['telemovel'],        
-            //':foto'            => $dados['foto'],        
+            ':foto'            => $dados['foto'],        
             ':administrador'   => $dados['administrador']           
         ]); 
 
@@ -149,4 +208,15 @@ function atualizar_password($dados){
          ]); 
 
     }
+}
+
+
+function utilizador_del($id){
+
+    $get = $GLOBALS['pdo']->prepare('DELETE FROM utilizadores WHERE id = ?;');
+
+    $get->bindValue(1, $id, PDO::PARAM_INT);
+
+    return $get->execute();
+
 }

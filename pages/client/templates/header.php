@@ -3,7 +3,7 @@
 
         $page = $_SERVER['PHP_SELF'];
 
-        include_once __DIR__ . '/../../../src/utils/auxiliadores.php';
+        @include_once __DIR__ . '/../../../src/utils/auxiliadores.php';
 
         $utilizador = utilizador();
 ?>

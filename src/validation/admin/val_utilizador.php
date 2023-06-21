@@ -64,10 +64,7 @@ function val_utilizador($data){
         }
     
     
-        if (!empty($data['confirmar_palavra_passe']) && ($data['confirmar_palavra_passe']) != $data['palavra_passe']) {
-            $erros['confirmar_palavra_passe'] = 'O campo Confirmar Palavra Passe não pode estar vazio e deve ser igual ao campo Palavra Passe.';
-        }
-    
+
         
         $data['administrador'] = !empty($data['administrador']) == 'on' ? true : false;
     
