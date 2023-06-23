@@ -46,7 +46,7 @@ require_once __DIR__ . '/../../../pages/admin/templates/header.php';
                 <div class="row">
                     <div class="col lign-items-center justify-content-center    ">
                         <div class="table table text-white">
-                            <p>erros</p>
+                            
                         </div>
                     </div>
                     <div class="col lign-items-center justify-content-center text-center">

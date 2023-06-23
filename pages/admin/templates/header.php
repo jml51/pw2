@@ -55,7 +55,11 @@
               <td>
                 <div class="d-flex justify-content">
                   <a href="/src/controller/admin/contr_utilizador.php? <?= 'utilizador=atualizar&id=' . $admin['id'] ?>"><button type="button" class="btn btn-primary me-2">Atualizar</button></a>
-                  <a href="/index.php" class="btn btn-danger ">sair</a>
+                  <a href="/index.php" class="btn btn-danger me-2 ">sair</a>
+                  <form action="/src/controller/client/contr_autenticar.php" method="post">
+                    <input type="hidden" name="page" value="<?php echo $page; ?>">
+                    <button class="btn btn-danger " type="submit" name="utilizador" value="logout">Logout</button>
+                  </form>
                 </div>
               </td>
             </tr>

@@ -18,11 +18,8 @@ require_once __DIR__ . '/../../../pages/admin/templates/header.php';
   <section class="py-4">
     <div class="d-flex justify-content">
       <a href="../criar_utilizador/criar_utilizador.php"><button class="btn btn-success px-4 me-2">Criar Utilizador</button></a>
-      <a href="../administraçao/administraçao.php"><button class="btn btn-info px-2 me-2">Sair Administração</button></a>
-      <form action="/src/controller/client/contr_autenticar.php" method="post">
-        <input type="hidden" name="page" value="<?php echo $page; ?>">
-        <button class="btn btn-danger px-4" type="submit" name="utilizador" value="logout">Fazer Logout</button>
-      </form>
+      <a href="../administraçao/administraçao.php"><button class="btn btn-info px-2 me-2">Sair de utilizadores</button></a>
+
     </div>
   </section>
   <section>
