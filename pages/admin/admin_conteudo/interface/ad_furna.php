@@ -2,6 +2,8 @@
  
     include_once __DIR__ . '/../../../../database/connections/request.php';
 
+    @require_once __DIR__ . '/../../../../src/middleware/admin.php';
+
 
     $data = furna();
     

@@ -4,6 +4,8 @@
 
     include_once __DIR__.'/../../database/connections/repositorio.php';
 
+    include_once __DIR__.'/../../database/connections/request_cont.php';
+
 
 function autenticado(){
 
@@ -35,6 +37,17 @@ function utilizadorId(){
     }
 }
 
+function get_all(){
+
+    return all_post();
+
+}
+
+function get_post_byuser($id){
+
+    return get_byuser($id);
+
+}
 
 function admin(){
 

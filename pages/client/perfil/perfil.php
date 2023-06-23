@@ -8,7 +8,13 @@
 
     include_once __DIR__ . '/../../../src/middleware/utilizador.php';
 
-    
+    include_once __DIR__ . '/../../../src/utils/auxiliadores.php';
+
+    include_once __DIR__ . '/../../../src/controller/content/contr_content.php';
+
+    $session_id = utilizadorId();
+
+    $user_pots = get_post_byuser($session_id);
 
 ?>
 
@@ -93,6 +99,34 @@
             </div>
     
         </section>
+        <section class="row bg-secondary text-white m-5">
+            <div class="col-5"></div>
+            <h4 class="col-4">POSTs</h4>
+        </section>
+        <section class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+            <?php 
+                foreach($user_pots as $user_pot){
+                    
+                    echo '<table class="table table-bordered">';
+                    echo '<thead class="table-dark">';
+                    echo '<tr>';
+                    echo  $utilizador['nome'];
+                    echo '</tr>';
+                    echo '<tr>';
+                    echo '<th>';
+                    echo  $user_pot['texto'];
+                    echo '</th>';
+                    echo '</tr>';
+                    
+                    echo '</table>';
+                    
+                }
+            ?>
+            </div>
+            <div class="col-3"></div>
+        </section>
         </div>                
     </main>
 </div>
@@ -101,6 +135,6 @@
 
 
 
-    <?php
+<?php
     include_once __DIR__ . '/../../../pages/client/templates/rodape.php'
 ?>

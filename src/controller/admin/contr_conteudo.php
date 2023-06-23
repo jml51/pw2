@@ -30,7 +30,7 @@
 
     function main_post($post){
 
-        if($_FILES['img2']['name']){
+        if(isset($_FILES['img2']['name'])){
 
             $post = save_foto2($post, 'img2' );
         }

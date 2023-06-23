@@ -2,6 +2,8 @@
  
     include_once __DIR__ . '/../../../../database/connections/request.php';
 
+    @require_once __DIR__ . '/../../../../src/middleware/admin.php';
+
 
     $data = mapa();
     
@@ -17,7 +19,7 @@
                     <div class="col-6">
                         <input class="m-3" type="text" name="titulo" value="<?= $data['titulo']?>">
                         <div class="col m-3">
-                            <textarea name="texto1" id="" cols="60" rows="10"><?= $data['texto1']?></textarea>
+                            <textarea name="texto1" id="" cols="50" rows="10"><?= $data['texto1']?></textarea>
                         </div>
                     </div>
                     <div class="col-6">

@@ -22,13 +22,6 @@ $pdo->exec(
 
 
 
-
-
-
-
-
-
-
 echo 'Tabela utilizadores creada!' . PHP_EOL;
 
 $utilizador = [
@@ -101,6 +94,59 @@ $sql = ('INSERT INTO utilizadores(
         ':administrador' => $utilizador2['administrador'],
         ':dono'          => $utilizador2['dono'],
         ':pass_word'        => $utilizador2['pass_word']
+    ]);
+
+
+
+
+//---------------------         blog       -----------------------------------//
+
+
+
+    $pdo->exec('DROP TABLE IF EXISTS posts;');
+
+    echo 'Tabela posts apagada!' . PHP_EOL;
+    
+    $pdo->exec(
+        'CREATE TABLE posts(
+            id INTEGER PRIMARY KEY,
+            utilizador int,  
+            texto char
+        ); 
+    ');
+
+    $posts =[
+        'utilizador' => '1',
+        'texto'     => 'One of the many dams in the national park which provide the lakeside scenery, this dam permits access to a circular route on the western side of the park. An interesting diversion close to the dam is the beaten earth road which follows the southern end of the lake. One must drive very carefully as it is often narrow with passing places and not always with barriers on bends or sheer drops. We didn t visit the sunken remains of Vilharino days Fumas village, as they are eerie places of ghoulish appeal. This area of wilderness could treat you to views of birds of prey, as it did us on our journey.'
+    ];
+
+    $posts2 =[
+        'utilizador' => '2',
+        'texto'     => 'As part of a road trip through Northern Portugal I visited part of the National Park, including Vilarinho das Furnas. The Dam it super high but most impressive of all is the dramatic landscape it creates in the surrounding area. And I loved the wild saffron blooming all over the place! You can do several hikes here, or if you don’t feel like moving, just have a picnic while enjoying the stunning views. This place made me very enthusiastic to visit other parts of the National Park on my next road trip.'
+    ];
+
+
+    $sql= ('INSERT INTO posts(
+                utilizador,
+                texto
+            )
+            values(
+                :utilizador,
+                :texto
+            
+            )'
+        );
+
+    $post = $GLOBALS['pdo']->prepare($sql);
+
+    $sussec = $post->execute([
+        ':utilizador'   => $posts['utilizador'],
+        ':texto'        => $posts['texto']
+    ]);
+
+    $sussec = $post->execute([
+        ':utilizador'   => $posts2['utilizador'],
+        ':texto'        => $posts2['texto']
     ]);
 
 

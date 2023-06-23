@@ -2,6 +2,7 @@
  
     include_once __DIR__ . '/../../../../database/connections/request.php';
 
+    @require_once __DIR__ . '/../../../../src/middleware/admin.php';
 
     $data = index();
     
@@ -29,9 +30,9 @@
                 </div>
                 <div class="row">
                     <div class="m-3">
-                        <textarea name="texto2" id="" cols="120" rows="8"><?= $data['texto2'] ?></textarea>                </div>
+                        <textarea name="texto2" id="" cols="100" rows="8"><?= $data['texto2'] ?></textarea>                </div>
                     <div class="m-3">
-                        <textarea name="texto3" id="" cols="120" rows="8"><?= $data['texto3'] ?></textarea>
+                        <textarea name="texto3" id="" cols="100" rows="8"><?= $data['texto3'] ?></textarea>
                     </div>
                 </div>
             </form>

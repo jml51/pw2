@@ -32,6 +32,7 @@
                         <li class="col"><a href="index.php">Home</a></li>
                         <li class="col"><a href="./pages/client/furna/furna.php">A Furna</a></li>
                         <li class="col"><a href="./pages/client/mapa/mapa.php">MAPA</a></li>
+                        <li class="col"><a href="./pages/client/blog/blog.php">blog</a></li>
                         <li class="col"><button id="login_abrir" >conta</button></li>
                     </ul>
                 </div>
