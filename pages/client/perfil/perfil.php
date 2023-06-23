@@ -1,11 +1,14 @@
 <?php
     session_start();
 
+
     include_once __DIR__ . '/../../../pages/client/templates/header.php';
 
     include_once __DIR__ . '/../../../src/middleware/autenticado.php';
 
     include_once __DIR__ . '/../../../src/middleware/utilizador.php';
+
+    
 
 ?>
 
@@ -76,7 +79,7 @@
                 <?php } ?>
                 <div class=" mb-4 ">
                     <label for="imgInp" class="input-text">foto</label>
-                    <input id="imgInp" accept="image/*" type="file" class="form-control" name="foto">
+                    <input id="imgInp" accept="image/*" type="file" class="form-control" name="foto" >
                 </div>
                 <div class="row align-items-center justify-content-center text-center">
                     <button  type="submit" name="utilizador" value="perfil" class="col-3 m-2 btn btn-primary ">Submit</button>
@@ -86,7 +89,7 @@
             </form>
             </div>
             <div class="col-6 align-items-center justify-content-center text-center">
-                <img style="border: 2px solid" id="imgp" src="#" class="img-rounded" alt="your image" />
+                <img style="border: 2px solid" id="imgp" src="<?= isset($_REQUEST['foto']) ? "/images/upload/$_REQUEST[foto]" : "/images/upload/$utilizador[foto]" ?>" class="img-rounded" alt="your image" />
             </div>
     
         </section>

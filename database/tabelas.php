@@ -56,6 +56,7 @@ $utilizador2 = [
 ];
 
 $utilizador['pass_word'] = password_hash($utilizador['pass_word'], PASSWORD_DEFAULT);
+$utilizador2['pass_word'] = password_hash($utilizador2['pass_word'], PASSWORD_DEFAULT);
 
 
 $sql = ('INSERT INTO utilizadores(
@@ -88,7 +89,7 @@ $sql = ('INSERT INTO utilizadores(
         ':foto'          => $utilizador['foto'],
         ':administrador' => $utilizador['administrador'],
         ':dono'          => $utilizador['dono'],
-        ':pass_word' => $utilizador['pass_word']
+        ':pass_word'       => $utilizador['pass_word']
     ]);
 
     $susseco = $post->execute([
@@ -99,7 +100,7 @@ $sql = ('INSERT INTO utilizadores(
         ':foto'          => $utilizador2['foto'],
         ':administrador' => $utilizador2['administrador'],
         ':dono'          => $utilizador2['dono'],
-        ':pass_word' => $utilizador2['pass_word']
+        ':pass_word'        => $utilizador2['pass_word']
     ]);
 
 
@@ -216,17 +217,8 @@ VALUES(
 
 $furna = [
     'titulo'    => 'Associação AFURNA',
-    'texto1'    => 'fundada em Outubro de 1985 <br> AFURNA tem por objectivo a defesa, valorização <br> e promoção do património cultural, colectivo e/ou <br> comunitário do antigo povo de Vilarinho da Furna',
-    'texto2'    => 'Com sede no Museu Etnográfico de Vilarinho da Furna, “AFURNA 
-                    Associação dos Antigos Habitantes de Vilarinho da Furna” é uma 
-                    instituição cultural, dotada de personalidade jurídica, que tem 
-                    como objetivo <br> a defesa, valorização e promoção do património cultural, 
-                    coletivo e/ou comunitário, do antigo povo de Vilarinho da Furna, 
-                    desenvolvendo atividades sociais para benefício dos ex-habitantes de Vilarinho 
-                    da Furna e seus familiares.
-                    Desde a sua criação, em outubro de 1985, AFURNA tem, além das atividades ambientais, 
-                    lutado pela preservação da história e da cultura desse povo tão peculiar.',
-
+    'texto1'    => 'fundada em Outubro de 1985 AFURNA tem por objectivo a defesa, valorização e promoção do património cultural, colectivo e/ou <br> comunitário do antigo povo de Vilarinho da Furna',
+    'texto2'    => 'Com sede no Museu Etnográfico de Vilarinho da Furna, “AFURNA Associação dos Antigos Habitantes de Vilarinho da Furna” é uma instituição cultural, dotada de personalidade jurídica, que tem como objetivo <br> a defesa, valorização e promoção do património cultural, coletivo e/ou comunitário, do antigo povo de Vilarinho da Furna, desenvolvendo atividades sociais para benefício dos ex-habitantes de Vilarinho da Furna e seus familiares. Desde a sua criação, em outubro de 1985, AFURNA tem, além das atividades ambientais, lutado pela preservação da história e da cultura desse povo tão peculiar.',
     'img1'      => '/images/environment/logo-associao.png'
 ];
 
@@ -280,12 +272,7 @@ VALUES(
 
 $mapa = [
     'titulo'    => 'Vilarinho da Furna',
-    'texto1'    => ' O acesso à zona onde a aldeia se encontra submersa é feito através de um caminho em terra batida de uso 
-                    privado dos antigos habitantes de Vilarinho da Furna. O acesso de carro é por vezes possível durante os 
-                    meses de verão, mediante o pagamento de uma taxa de acesso pela associação “A Furna”, de forma a promover 
-                    a manutenção da memória dos hábitos e costumes da antiga aldeia. <br>
-                    Durante o resto do ano, o acesso é apenas possível de forma pedonal.',
-
+    'texto1'    => ' O acesso à zona onde a aldeia se encontra submersa é feito através de um caminho em terra batida de uso privado dos antigos habitantes de Vilarinho da Furna. O acesso de carro é por vezes possível durante os meses de verão, mediante o pagamento de uma taxa de acesso pela associação “A Furna”, de forma a promover a manutenção da memória dos hábitos e costumes da antiga aldeia. Durante o resto do ano, o acesso é apenas possível de forma pedonal.',
     'texto2'    => 'trilho que começa na barragem de Vilarinho das Furnas, a mesma que causou a inundação da aldeia, e segue a beira ria ate a  nossa esperada vial que é a primeira atração desta trilha mas não a única.',
     'img1'      => '/images/environment/Vilarinho-da-Furna.jpg',
     'img2'      => '/images/environment/trilha.png'

@@ -1,9 +1,13 @@
 <?php 
-        session_start();
+        @session_start();
 
         $page = $_SERVER['PHP_SELF'];
 
+        
+
         @include_once __DIR__ . '/../../../src/utils/auxiliadores.php';
+
+        
 
         $utilizador = utilizador();
 ?>

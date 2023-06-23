@@ -1,15 +1,19 @@
 <?php
 
 
+
 //http://localhost:8080/pages/admin/criar_utilizador/criar_utilizador.php?id=2&nome=pedro&nif=123456789&email=8854%40didaxis.org&telemovel=987654987&administrador=&pass_word=%242y%2410%24JOyP1.EQKCATBibe93iI%2F.6atViyAo49FuUwR3Sm5pfwdMEKmXTB.&acao=atualizar
 
 //http://localhost:8080/pages/admin/criar_utilizador/criar_utilizador.php?nome=pedro&email=8854%40didaxis.org&pass_word=&nif=12345&telemovel=987654987&id=2&foto=&utilizador=atualizar
 
 
 
-require_once __DIR__ .'/../../../database/repositorio.php';
+require_once __DIR__ .'/../../../database/connections/repositorio.php';
+
 require_once __DIR__ .'/../../../src/validation/admin/val_utilizador.php';
+
 require_once __DIR__ .'/../../../src/validation/admin/val_pass.php';
+
 require_once __DIR__ .'/../../../src/utils/auxiliadores.php';
 
 
@@ -87,7 +91,7 @@ if(isset($_GET['utilizador'])){
 function atual_perfil($post){
 
     $dados = val_utilizador($post);
-
+ 
     if(isset($dados['invalido'])){
 
         $_SESSION['erros'] = $dados['invalido'];
@@ -184,7 +188,7 @@ function save_foto($dados, $fotoAntiga = null)
 
         if (isset($dados['utilizador']) && ($dados['utilizador'] == 'atualizar') || ($dados['utilizador'] == 'perfil')) {
 
-            unlink($caminhoFicheiro . $fotoAntiga['foto']);
+            unlink($caminhoFicheiro .'/'. $fotoAntiga['foto']);
         }
     }
 

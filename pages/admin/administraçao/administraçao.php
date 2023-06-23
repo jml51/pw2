@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ .'/../../../database/repositorio.php';
+require_once __DIR__ .'/../../../database/connections/repositorio.php';
 
 
 
